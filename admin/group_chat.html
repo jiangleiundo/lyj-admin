@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/base.css" />
+		<link rel="stylesheet" href="css/bootstrap.css" />
+		<link rel="stylesheet" href="css/font-awesome.min.css" />
+		<link rel="stylesheet" href="css/icons.css" />
+		<link rel="stylesheet" href="css/ui-base.css" />
+		<link rel="stylesheet" href="css/lyju.css" />
+		<link rel="shortcut icon" href="images/favicon.ico">
+		<link rel="Bookmark" href="images/favicon.ico">
+	</head>
+	<body>
+		<div class="spinner">
+		  <div class="rect1"></div>
+		  <div class="rect2"></div>
+		  <div class="rect3"></div>
+		  <div class="rect4"></div>
+		  <div class="rect5"></div>
+		</div>
+		
+		<div class="preload" id="group_chatbox">
+			<div class="group_chat">
+				<div class="con_top border-b">
+					<i class="fa fa-th"></i>&nbsp;
+					团列表
+				</div>
+
+				<div class="admin_table group_chat_list_table">
+					<table class="table">
+						<thead>
+							<tr>
+								<td class="gtd0">序号</td>
+								<td class="gtd">团名称</td>
+								<td class="gtd">团头像</td>
+								<td class="gtd">创建人</td>
+								<td class="gtd">创建时间</td>
+								<td class="gtd">结束时间</td>
+								<td class="gtd">团人数</td>
+								<td class="gtd">安全提醒列表</td>
+								<td class="gtd">行程通知列表</td>
+	   						</tr>
+						</thead>
+						<tbody id="tbody">
+							
+						</tbody>
+					</table>				
+				</div>
+				
+				<!--底部分栏-->
+			    <div class="footer border-b border-t">
+					<div class="rt to_page_btn"><a class="btn btn-default" id="toPage"> 确定 </a></div>
+					<div class="rt to_page_num"> 到第 <input type="text" id="txtPage"/> 页 </div>
+					<div class="rt all_page_num"> 共 <span id="pagenum"></span> 页 </div>
+					<div class="rt show_pages"> 每页显示 <select id="setPagenum"><option value="5">5</option><option value="10">10</option><option value="15">15</option><option value="20">20</option></select> 条 </div>
+					<div class="rt last_page"><a href="#" class="btn btn-default" id="last">尾页</a></div>
+					<div class="rt next_page"><a href="#" class="btn btn-default" id="next">下一页>></a></div>
+					<div class="rt prew_page"><a href="#" class="btn btn-default" id="prev"><span><<</span>上一页</a></div>
+					<div class="rt first_page"><a href="#" class="btn btn-default" id="first">首页</a></div>
+					<div class="clr"></div>
+				</div>
+			</div>
+			<div class="group_chat0" style="display: none;">
+				<div class="con_top border-b sightManage">
+					<i class="fa fa-th"></i>&nbsp;
+					团内游客列表
+					<a id="btnCancel" class="btn btn-default"><i class="fa fa-eraser"></i> 取消</a>
+				</div>
+
+				<div class="admin_table orange_list_table">
+					<table class="table">
+						<thead>
+							<tr>
+								<td>序号</td>
+								<td>头像</td>
+								<td>用户名</td>
+								<td>性别</td>
+								<td>积分</td>
+								<td>群聊记录查询</td>
+	   						</tr>
+						</thead>
+						<tbody id="tbody0">
+							
+						</tbody>
+					</table>				
+				</div>
+				
+				<!--底部分栏-->
+			    <div class="footer border-b border-t">
+					<div class="rt to_page_btn"><a class="btn btn-default" id="toPage0"> 确定 </a></div>
+					<div class="rt to_page_num"> 到第 <input type="text" id="txtPage0"/> 页 </div>
+					<div class="rt all_page_num"> 共 <span id="pagenum0"></span> 页 </div>
+					<div class="rt show_pages"> 每页显示 <select id="setPagenum0"><option value="5">5</option><option value="10">10</option><option value="15">15</option><option value="20">20</option></select> 条 </div>
+					<div class="rt last_page"><a href="#" class="btn btn-default" id="last0">尾页</a></div>
+					<div class="rt next_page"><a href="#" class="btn btn-default" id="next0">下一页>></a></div>
+					<div class="rt prew_page"><a href="#" class="btn btn-default" id="prev0"><span><<</span>上一页</a></div>
+					<div class="rt first_page"><a href="#" class="btn btn-default" id="first0">首页</a></div>
+					<div class="clr"></div>
+				</div>
+			</div>
+			<div class="group_notice" style="display: none;">
+				<div class="con_top border-b sightManage">
+					<i class="fa fa-th"></i>&nbsp;
+					通知列表
+					<a id="btnCancel0" class="btn btn-default"><i class="fa fa-eraser"></i> 取消</a>
+				</div>
+				<div class="admin_table orange_list_table">
+					<table class="table">
+						<thead>
+							<tr>
+								<td class="t-w-1">序号</td>
+								<td class="t-w-2">发送者</td>
+								<td class="t-w-2">发送时间</td>
+								<td class="t-w-3">发送内容</td>
+								<td class="t-w-2">阅读详情</td>
+	   						</tr>
+						</thead>
+						<tbody id="tbody1">
+							
+						</tbody>
+					</table>				
+				</div>
+				
+				<!--底部分栏-->
+			    <div class="footer border-b border-t">
+					<div class="rt to_page_btn"><a class="btn btn-default" id="toPage1"> 确定 </a></div>
+					<div class="rt to_page_num"> 到第 <input type="text" id="txtPage1"/> 页 </div>
+					<div class="rt all_page_num"> 共 <span id="pagenum1"></span> 页 </div>
+					<div class="rt show_pages"> 每页显示 <select id="setPagenum1"><option value="5">5</option><option value="10">10</option><option value="15">15</option><option value="20">20</option></select> 条 </div>
+					<div class="rt last_page"><a href="#" class="btn btn-default" id="last1">尾页</a></div>
+					<div class="rt next_page"><a href="#" class="btn btn-default" id="next1">下一页>></a></div>
+					<div class="rt prew_page"><a href="#" class="btn btn-default" id="prev1"><span><<</span>上一页</a></div>
+					<div class="rt first_page"><a href="#" class="btn btn-default" id="first1">首页</a></div>
+					<div class="clr"></div>
+				</div>
+			</div>
+			<div class="group_chat_list" style="display: none;">
+				<div class="con_top border-b sightManage">
+					<i class="fa fa-th"></i>&nbsp;
+					群聊记录
+					<a id="btnCancel00" class="btn btn-default"><i class="fa fa-eraser"></i> 取消</a>
+				</div>
+				<div class="admin_btn border-b uIntegealTitle">
+					<div class="tab" id="tab">
+						<div class="tab_active" id="get_integral" data-id="0">团游客聊天记录</div>
+						<div id="take_integral" data-id="1">团导游聊天记录</div>
+						<span></span>
+					</div>
+				</div>
+				<div class="admin_table orange_list_table">
+					<table class="table">
+						<thead>
+							<tr>
+								<td class="t-w-1">序号</td>
+								<td class="t-w-1">发送者</td>
+								<td class="t-w-1">信息类型</td>
+								<td class="t-w-3">聊天内容</td>
+								<td class="t-w-2">发送时间</td>
+	   						</tr>
+						</thead>
+						<tbody id="tbody2">
+							
+						</tbody>
+					</table>				
+				</div>
+				
+				<!--底部分栏-->
+			    <div class="footer border-b border-t">
+					<div class="rt to_page_btn"><a class="btn btn-default" id="toPage2"> 确定 </a></div>
+					<div class="rt to_page_num"> 到第 <input type="text" id="txtPage2"/> 页 </div>
+					<div class="rt all_page_num"> 共 <span id="pagenum2"></span> 页 </div>
+					<div class="rt show_pages"> 每页显示 <select id="setPagenum2"><option value="5">5</option><option value="10">10</option><option value="15">15</option><option value="20">20</option></select> 条 </div>
+					<div class="rt last_page"><a href="#" class="btn btn-default" id="last2">尾页</a></div>
+					<div class="rt next_page"><a href="#" class="btn btn-default" id="next2">下一页>></a></div>
+					<div class="rt prew_page"><a href="#" class="btn btn-default" id="prev2"><span><<</span>上一页</a></div>
+					<div class="rt first_page"><a href="#" class="btn btn-default" id="first2">首页</a></div>
+					<div class="clr"></div>
+				</div>
+			</div>
+			<div class="group_chat_read_list" style="display: none;">
+				<div class="con_top border-b sightManage">
+					<i class="fa fa-th"></i>&nbsp;
+					阅读记录
+					<a id="btnCancel000" class="btn btn-default"><i class="fa fa-eraser"></i> 取消</a>
+				</div>
+				<div class="admin_table orange_list_table">
+					<table class="table">
+						<thead>
+							<tr>
+								<td>序号</td>
+								<td>团成员</td>
+								<td>是否已阅读</td>
+	   						</tr>
+						</thead>
+						<tbody id="tbody3">
+							
+						</tbody>
+					</table>				
+				</div>
+			</div>
+	    </div>
+	    
+	</body>
+	<script src="library/jquery-1.11.3.min.js"></script>
+	<script src="library/bootstrap.min.js"></script>
+	<script src="config/consts.js"></script>
+	<script src="common/common.js"></script>
+	<script src="model/meeno.js"></script>
+	<script type="text/javascript" src="controller/pageIndex.js"></script>
+	<script type="text/javascript" src="controller/pageIndex0.js" ></script>
+	<script type="text/javascript" src="controller/pageIndex1.js" ></script>
+	<script type="text/javascript" src="controller/pageIndex2.js" ></script>
+	<script src="controller/group_chat.js"></script>
+	<script>
+		$("#tab").find("div").on("click",function(){
+			var i = $(this).index();
+			$(this).addClass("tab_active").siblings("div").removeClass("tab_active");
+			$(this).siblings("span").stop().animate({left:$(this).width()*i},"fast")
+		})
+	</script>
+</html>

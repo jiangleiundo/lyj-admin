@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="css/icons.css" />
+    <link rel="stylesheet" href="css/ui-base.css" />
+    <link rel="stylesheet" href="css/lyju.css" />
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="Bookmark" href="images/favicon.ico">
+</head>
+<body>
+<div class="spinner">
+    <div class="rect1"></div>
+    <div class="rect2"></div>
+    <div class="rect3"></div>
+    <div class="rect4"></div>
+    <div class="rect5"></div>
+</div>
+
+<div class="preload">
+    <div id="main-box">
+        <div class="con_top border-b fix">
+            <div class="lt"><i class="fa fa-th"></i>&nbsp;系统消息列表</div>
+            <div class="rt"><a class="btn btn-info" id="sendMsg"><i class="ti-plus"></i>推送消息</a></div>
+        </div>
+
+        <div class="address_table jl_safety_notice m-t-20">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <td class="t-notice1">序号</td>
+                        <td class="t-notice3">消息内容</td>
+                        <td class="t-notice15">推送时间</td>
+                        <td class="t-notice2">操作</td>
+                    </tr>
+                </thead>
+                <tbody id="tbody"></tbody>
+            </table>
+        </div>
+        <!--底部分栏-->
+        <div class="footer border-b border-t footCountry">
+            <div class="rt to_page_btn"><a class="btn btn-default" id="toPage"> 确定 </a></div>
+            <div class="rt to_page_num"> 到第 <input type="text" id="txtPage"/> 页 </div>
+            <div class="rt all_page_num"> 共 <span id="pagenum"></span> 页 </div>
+            <div class="rt show_pages"> 每页显示 <select id="setPagenum"><option value="5">5</option><option value="10">10</option><option value="15">15</option><option value="20">20</option></select> 条 </div>
+            <div class="rt last_page"><a href="javascript:" class="btn btn-default" id="last">尾页</a></div>
+            <div class="rt next_page"><a href="javascript:" class="btn btn-default" id="next">下一页>></a></div>
+            <div class="rt prew_page"><a href="javascript:" class="btn btn-default" id="prev"><span><<</span>上一页</a></div>
+            <div class="rt first_page"><a href="javascript:" class="btn btn-default" id="first">首页</a></div>
+            <div class="clr"></div>
+        </div>
+    </div>
+    <div id="info-box" style="display: none">
+        <div class="con_top border-b fix">
+            <div class="lt"><i class="fa fa-th"></i>&nbsp;推送系统消息</div>
+            <div class="rt"><a class="btn btn-default" id="back2MsgList"><i class="ti-back-left"></i>返回</a></div>
+        </div>
+
+        <div class="address_table m-t-20 con-box">
+            <div class="con-item fix">
+                <span class="lt">推送消息内容</span>
+                <div class="lt">
+                    <textarea id="msgCon" class="form-control" placeholder="输入推送消息内容..."></textarea>
+                </div>
+            </div>
+            <div class="con-item fix">
+                <span class="lt">发出推送</span>
+                <a class="lt btn btn-info" id="submitMsg">发出系统消息推送</a>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="library/jquery-1.11.3.min.js" ></script>
+<script type="text/javascript" src="library/bootstrap.min.js" ></script>
+<script type="text/javascript" src="config/consts.js" ></script>
+<script type="text/javascript" src="model/meeno.js" ></script>
+<script type="text/javascript" src="common/common.js" ></script>
+<script type="text/javascript" src="controller/pageIndex.js" ></script>
+<script type="text/javascript" src="controller/sysMsgCtrl.js"></script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/ui-base.css" />
+    <link rel="stylesheet" href="css/lyju.css" />
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="Bookmark" href="images/favicon.ico">
+</head>
+<body>
+    <div class="spinner">
+        <div class="rect1"></div>
+        <div class="rect2"></div>
+        <div class="rect3"></div>
+        <div class="rect4"></div>
+        <div class="rect5"></div>
+    </div>
+
+    <div class="preload">
+        <div class="safety_notice_list">
+            <div class="con_top border-b">
+                <i class="fa fa-th"></i>&nbsp;
+                时间刷新控制
+            </div>
+            <div class="admin_btn border-b uIntegealTitle"></div>
+
+            <div class="version-service">
+                <div class="version-con-s">
+                    <span>上传时间：</span>
+                    <div class="version-content" id="reportTime"></div>
+                </div>
+                <div class="version-con-s">
+                    <span>上传时间间隔：</span>
+                    <div class="version-content" id="reportTimeGap"></div>
+                    <div class="version-btn-s">单位（秒）</div>
+                </div>
+                <div class="version-con-s" style="margin-top: 20px;">
+                    <span>拉取时间：</span>
+                    <div class="version-content" id="pullTime"></div>
+                </div>
+                <div class="version-con-s">
+                    <span>拉取时间间隔：</span>
+                    <div class="version-content" id="pullTimeGap"></div>
+                    <div class="version-btn-s">单位（秒）</div>
+                </div>
+                <div class="version-con-s" style="margin-top: 30px;">
+                    <span></span>
+                    <div class="version-content"><a class="btn btn-info" id="modifyTime">提交更新</a></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script type="text/javascript" src="library/jquery-1.11.3.min.js" ></script>
+    <script type="text/javascript" src="library/bootstrap.min.js" ></script>
+    <script type="text/javascript" src="config/consts.js" ></script>
+    <script type="text/javascript" src="model/meeno.js" ></script>
+    <script type="text/javascript" src="common/common.js" ></script>
+    <script type="text/javascript" src="controller/timeCtrl.js"></script>
+</body>
+</html>

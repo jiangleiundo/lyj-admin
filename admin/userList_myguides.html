@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/base.css" />
+		<link rel="stylesheet" href="css/bootstrap.css" />
+		<link rel="stylesheet" href="css/font-awesome.min.css" />
+		<link rel="stylesheet" href="css/icons.css" />
+		<link rel="stylesheet" href="css/ui-base.css" />
+		<link rel="stylesheet" href="css/lyju.css" />
+		<link rel="shortcut icon" href="images/favicon.ico">
+		<link rel="Bookmark" href="images/favicon.ico">
+	</head>
+	<body>
+		<div class="spinner">
+		    <div class="rect1"></div>
+		    <div class="rect2"></div>
+		    <div class="rect3"></div>
+		    <div class="rect4"></div>
+		    <div class="rect5"></div>
+		</div>
+		
+		<div class="preload">
+
+			<div class="my_chat_guide">
+				<div class="con_top border-b con_integral">
+					<i class="fa fa-th"></i>&nbsp;
+					咨询过的导游列表
+					<a id="btnCancel" class="btn btn-default"><i class="fa fa-eraser"></i> 返回</a>
+				</div>
+				<div class="admin_btn border-b uIntegealTitle"></div>
+
+				<div class="admin_table user_listmyguides_table">
+					<table class="table">
+						<thead id="thead">
+							<tr>
+								<td class="my_guides">序号</td>
+								<td class="my_guides">咨询的导游</td>
+								<td class="my_guides">咨询时间</td>
+								<td class="my_guides">查看聊天内容</td>
+							</tr>
+						</thead>
+						<tbody id="tbody">
+							
+						</tbody>
+					</table>				
+				</div>
+				<!--底部分栏-->
+			    <div class="footer border-b border-t">
+					<div class="rt to_page_btn"><a class="btn btn-default" id="toPage"> 确定 </a></div>
+					<div class="rt to_page_num"> 到第 <input type="text" id="txtPage"/> 页 </div>
+					<div class="rt all_page_num"> 共 <span id="pagenum"></span> 页 </div>
+					<div class="rt show_pages"> 每页显示
+                        <select id="setPagenum">
+                        <option value="5">5</option>
+                        <option value="10">10</option>
+                        <option value="15">15</option>
+                        <option value="20">20</option>
+                    </select> 条 </div>
+					<div class="rt last_page"><a href="#" class="btn btn-default" id="last">尾页</a></div>
+					<div class="rt next_page"><a href="#" class="btn btn-default" id="next">下一页>></a></div>
+					<div class="rt prew_page"><a href="#" class="btn btn-default" id="prev"><span><<</span>上一页</a></div>
+					<div class="rt first_page"><a href="#" class="btn btn-default" id="first">首页</a></div>
+					<div class="clr"></div>
+				</div>
+			</div>
+			<div class="chat_detials" style="display: none;">
+				<div class="con_top border-b sightManage">
+					<i class="fa fa-th"></i>&nbsp;
+					咨询记录
+					<a id="btnCancel00" class="btn btn-default"><i class="fa fa-eraser"></i> 返回</a>
+				</div>
+				<div class="admin_btn border-b uIntegealTitle">
+					<div class="tab" id="tab">
+						<div class="tab_active" id="get_integral" data-id="0">游客聊天记录</div>
+						<div id="take_integral" data-id="1">导游聊天记录</div>
+						<span></span>
+					</div>
+				</div>
+				<div class="admin_table orange_list_table">
+					<table class="table">
+						<thead>
+							<tr>
+								<td class="t-w-1">序号</td>
+								<td class="t-w-1">发送者</td>
+								<td class="t-w-1">信息类型</td>
+								<td class="t-w-3">聊天内容</td>
+								<td class="t-w-2">发送时间</td>
+	   						</tr>
+						</thead>
+						<tbody id="tbody0">
+							
+						</tbody>
+					</table>				
+				</div>
+				
+				<!--底部分栏-->
+			    <div class="footer border-b border-t">
+					<div class="rt to_page_btn"><a class="btn btn-default" id="toPage0"> 确定 </a></div>
+					<div class="rt to_page_num"> 到第 <input type="text" id="txtPage0"/> 页 </div>
+					<div class="rt all_page_num"> 共 <span id="pagenum0"></span> 页 </div>
+					<div class="rt show_pages"> 每页显示 <select id="setPagenum0"><option value="5">5</option><option value="10">10</option><option value="15">15</option><option value="20">20</option></select> 条 </div>
+					<div class="rt last_page"><a href="#" class="btn btn-default" id="last0">尾页</a></div>
+					<div class="rt next_page"><a href="#" class="btn btn-default" id="next0">下一页>></a></div>
+					<div class="rt prew_page"><a href="#" class="btn btn-default" id="prev0"><span><<</span>上一页</a></div>
+					<div class="rt first_page"><a href="#" class="btn btn-default" id="first0">首页</a></div>
+					<div class="clr"></div>
+				</div>
+			</div>
+	    </div>
+	    
+	</body>
+	<script src="library/jquery-1.11.3.min.js"></script>
+	<script src="library/bootstrap.min.js"></script>
+	<script src="config/consts.js"></script>
+	<script src="common/common.js"></script>
+	<script src="model/meeno.js"></script>
+	<script type="text/javascript" src="controller/pageIndex.js"></script>
+	<script type="text/javascript" src="controller/pageIndex0.js"></script>
+	<script src="controller/userList_myguides.js"></script>
+	<script>
+		$("#tab").find("div").on("click",function(){
+			var i = $(this).index();
+			$(this).addClass("tab_active").siblings("div").removeClass("tab_active");
+			$(this).siblings("span").stop().animate({left: $(this).width()*i}, "fast");
+		})
+		
+	</script>
+</html>

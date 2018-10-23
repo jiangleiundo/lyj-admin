@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/base.css" />
+		<link rel="stylesheet" href="css/bootstrap.css" />
+		<link rel="stylesheet" href="css/font-awesome.min.css" />
+		<link rel="stylesheet" href="css/ui-base.css" />
+		<link rel="stylesheet" href="css/lyju.css" />
+		<link rel="shortcut icon" href="images/favicon.ico">
+		<link rel="Bookmark" href="images/favicon.ico">
+	</head>
+	<body>
+		<div class="spinner">
+		  <div class="rect1"></div>
+		  <div class="rect2"></div>
+		  <div class="rect3"></div>
+		  <div class="rect4"></div>
+		  <div class="rect5"></div>
+		</div>
+		
+		<div class="preload">
+			<div class="con_top border-b">
+				<i class="fa fa-th"></i>&nbsp;
+				地点管理
+			</div>
+			<div class="admin_btn border-b border-t">
+				<div class="country_search lt">
+					<div class="coun_s lt">国家查询：</div>
+					<div class="coun_input lt"><input class="form-control" type="text" id="txtPriName"/></div>
+					<a id="coun_search_btn" class="btn btn-default lt"><i class="fa fa-search"></i> 查询</a>
+				</div>
+				<a id="btnDel" class="rt btn btn-default"><i class="fa fa-trash"></i> 删除</a>
+				<a id="btnAdd" class="rt btn btn-default"><i class="fa fa-plus"></i> 添加</a>
+			</div>
+			
+			<div class="address_table">
+				<table class="table">
+					<thead>
+						<tr>
+							<td>序号</td>
+							<td>国家名称</td>
+							<td>目的地信息</td>
+							<td>修改</td>
+							<td>选择省份</td>
+							<td>
+								<div class="rem_con">
+									<div class="rem_con_rg">全选</div>
+									<div class="rem_con_lf">&nbsp;<span class="un_sel" id="allsel"></span></div>
+								</div>
+							</td>
+						</tr>
+					</thead>
+					<tbody id="tbody">
+						
+					</tbody>
+				</table>
+			</div>
+			<!--底部分栏-->
+		    <div class="footer border-b border-t footCountry">
+				<div class="rt to_page_btn"><a class="btn btn-default" id="toPage"> 确定 </a></div>
+				<div class="rt to_page_num"> 到第 <input type="text" id="txtPage"/> 页 </div>
+				<div class="rt all_page_num"> 共 <span id="pagenum"></span> 页 </div>
+				<div class="rt show_pages"> 每页显示 <select id="setPagenum"><option value="5">5</option><option value="10">10</option><option value="15">15</option><option value="20">20</option></select> 条 </div>
+				<div class="rt last_page"><a href="javascript:" class="btn btn-default" id="last">尾页</a></div>
+				<div class="rt next_page"><a href="javascript:" class="btn btn-default" id="next">下一页>></a></div>
+				<div class="rt prew_page"><a href="javascript:" class="btn btn-default" id="prev"><span><<</span>上一页</a></div>
+				<div class="rt first_page"><a href="javascript:" class="btn btn-default" id="first">首页</a></div>
+				<div class="clr"></div>
+			</div>	
+		</div>
+		<!--modal-->
+		<div id="commonModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+            <div class="modal-dialog"> 
+	            <div class="modal-content"> 
+	                <div class="modal-header"> 
+	                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button> 
+	                    <h4 class="modal-title" id="modalTitle"></h4> 
+	                </div> 
+	                <div class="modal-body"> 
+	                    <div class="row"> 
+	                 
+	                        <div class="col-md-12"> 
+	                            <div class="form-group"> 
+	                                <label class="control-label">国家名</label>
+	                                <input type="text" class="form-control" id="countryName" placeholder="请输入要添加的国家名"> 
+	                            </div>
+	                            <div class="form-group"> 
+	                                <label class="control-label">目的地信息</label>
+	                                <textarea name="content"  rows="10" class="form-control"  id="textarea" placeholder="请输入要修改的信息"></textarea>
+	                            </div>
+	                        </div> 
+	           
+	                    </div> 
+	                </div>
+	                <div class="modal-footer"> 
+	                    <a type="button" class="btn btn-default waves-effect waves-light" id="modalSubmit">提交</a> 
+	                </div> 
+	            </div> 
+	        </div>
+	    </div><!-- /.modal -->
+		<script type="text/javascript" src="library/jquery-1.11.3.min.js" ></script>
+		<script type="text/javascript" src="library/bootstrap.min.js" ></script>
+		<script type="text/javascript" src="config/consts.js" ></script>
+		<script type="text/javascript" src="model/meeno.js" ></script>
+		<script type="text/javascript" src="common/common.js" ></script>
+		<script type="text/javascript" src="controller/pageIndex.js" ></script>
+		<script type="text/javascript" src="controller/get_country.js"></script>
+	</body>
+</html>

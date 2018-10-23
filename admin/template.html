@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/ui-base.css" />
+    <link rel="stylesheet" href="css/lyju.css" />
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="Bookmark" href="images/favicon.ico">
+</head>
+<body>
+<div class="spinner">
+    <div class="rect1"></div>
+    <div class="rect2"></div>
+    <div class="rect3"></div>
+    <div class="rect4"></div>
+    <div class="rect5"></div>
+</div>
+
+<div class="preload">
+    <div class="safety_notice_list">
+        <div class="con_top border-b fix">
+            <div class="lt"><i class="fa fa-th"></i>&nbsp;模板列表</div>
+            <a id="btnAdd" style="margin:12px 20px 0 0" class="btn btn-default rt"><i class="fa fa-plus"></i> 添加</a>
+        </div>
+        <div class="admin_btn border-b uIntegealTitle">
+        </div>
+        <div class="address_table jl_safety_notice">
+            <table class="table">
+                <thead>
+                <tr>
+                    <td class="t-notice1">序号</td>
+                    <td class="t-notice3">模板内容</td>
+                    <td class="t-notice2">创建时间</td>
+                    <td class="t-notice2">编辑</td>
+                    <td class="t-notice2">删除</td>
+                </tr>
+                </thead>
+                <tbody id="tbody">
+
+                </tbody>
+            </table>
+        </div>
+        <!--底部分栏-->
+        <div class="footer border-b border-t footCountry">
+            <div class="rt to_page_btn"><a class="btn btn-default" id="toPage"> 确定 </a></div>
+            <div class="rt to_page_num"> 到第 <input type="text" id="txtPage"/> 页 </div>
+            <div class="rt all_page_num"> 共 <span id="pagenum"></span> 页 </div>
+            <div class="rt show_pages"> 每页显示 <select id="setPagenum"><option value="5">5</option><option value="10">10</option><option value="15">15</option><option value="20">20</option></select> 条 </div>
+            <div class="rt last_page"><a href="javascript:" class="btn btn-default" id="last">尾页</a></div>
+            <div class="rt next_page"><a href="javascript:" class="btn btn-default" id="next">下一页>></a></div>
+            <div class="rt prew_page"><a href="javascript:" class="btn btn-default" id="prev"><span><<</span>上一页</a></div>
+            <div class="rt first_page"><a href="javascript:" class="btn btn-default" id="first">首页</a></div>
+            <div class="clr"></div>
+        </div>
+    </div>
+    <!--modal-->
+    <div id="commonModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h4 class="modal-title" id="modalTitle"></h4>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <textarea name="content"  rows="7" class="form-control"  id="templateBox"></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <a class="btn btn-info" id="addTime">添加时间参数</a>
+                            <a style="margin-left: 20px;" class="btn btn-info" id="addInput">添加输入框参数</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a type="button" class="btn btn-default waves-effect waves-light" id="templateSubmit">提交</a>
+                </div>
+            </div>
+        </div>
+    </div><!--e -modal -->
+</div>
+
+<script type="text/javascript" src="library/jquery-1.11.3.min.js" ></script>
+<script type="text/javascript" src="library/bootstrap.min.js" ></script>
+<script type="text/javascript" src="config/consts.js" ></script>
+<script type="text/javascript" src="model/meeno.js" ></script>
+<script type="text/javascript" src="common/common.js" ></script>
+<script type="text/javascript" src="controller/pageIndex.js" ></script>
+<script type="text/javascript" src="controller/templateCtrl.js"></script>
+
+</body>
+</html>

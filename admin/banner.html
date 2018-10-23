@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/base.css" />
+		<link rel="stylesheet" href="css/bootstrap.css" />
+		<link rel="stylesheet" href="css/font-awesome.min.css" />
+		<link rel="stylesheet" href="css/ui-base.css" />
+		<link rel="stylesheet" href="css/lyju.css" />
+		<link rel="shortcut icon" href="images/favicon.ico">
+		<link rel="Bookmark" href="images/favicon.ico">
+	</head>
+	<body>
+
+			<div class="data-container">
+				
+				<div class="com_top">
+					<div class="com_top_lf"><i class="fa fa-th"></i> banner管理</div>
+					<div class="com_top_rg"><a class="btn btn-default waves-effect waves-light" id="btnAdd"><i class="md-add"></i> 添加</a></div>
+				</div>
+				
+				<div class="card-box m-t-20">
+			    	<table class="table">
+						<thead>
+				 	  	    <tr>
+				 	  	   	    <td>位置</td>
+				 	  	   	    <td>图片</td>
+				 	  	   	    <td>跳转类型</td>
+				 	  	   	    <td>跳转参数</td>
+				 	  	   	    <td>排序</td>
+				 	  	   	    <td>修改</td>
+				 	  	   	    <td>删除</td>
+				 	  	    </tr>	 	  	   
+					 	</thead>
+					 	<tbody id="tbody">
+				 	    	
+					 	</tbody>
+					</table>
+			    </div>
+			    
+			</div>
+			<!--1-->
+			
+			<!--2-->
+			<div class="add-container" style="display: none;">
+				<div class="com_top">
+					<div class="com_top_lf"><i class="fa fa-th"></i> <span id="addTitle"></span></div>
+					<div class="com_top_rg"><a class="btn btn-default waves-effect waves-light" id="btnBack"><i class="ion-android-system-back"></i> 返回</a></div>
+				</div>
+				
+				<div class="card-box m-t-20">
+					<div class="add-item">
+						<div class="add-item-lf">banner位置:</div>
+						<div class="add-item-md">
+							<select class="form-control" id="sel-position">
+								<option value="0">顶部</option>
+								<option value="1">中间</option>
+							</select>
+						</div>
+					</div>
+					<div class="add-item">
+						<div class="add-item-lf">跳转类型:</div>
+						<div class="add-item-md">
+							<select class="form-control" id="sel-jump-style">
+								<option value="0">无跳转</option>
+								<option value="1">跳转URL</option>
+								<option value="2">跳转团</option>
+							</select>
+						</div>
+					</div>
+					<div class="add-item">
+						<div class="add-item-lf">排序:</div>
+						<div class="add-item-md"><input type="number" class="form-control" id="banner-sort"/></div>
+					</div>
+					
+					<div class="add-item">
+						<div class="add-item-lf">跳转参数：</div>
+						<div class="add-item-rg"><input type="text" class="form-control" id="banner-jump-param"/></div>
+					</div>
+					
+					<div class="upload_item">
+						<div class="upload_item_lf">上传图片：</div>
+						<div class="upload_item_md">
+							<div class="upLoadTitle">
+								<div class="selFile lt">
+									<a class="btn btn-warning">选择文件</a>
+									<input type="file" id="bannerUpload"/>
+								</div>
+								<div class="lt upLoadState">
+									<div id="percent"></div>
+								</div>
+							</div>
+							<div id="banner-box">
+								<!--<div class="banner-img">
+									<img src="images/default.jpg" />
+								</div>-->
+							</div>
+							<div id="banner-con"></div>
+						</div>
+					</div>
+
+					<div class="submit_con">
+						<a id="subBanner">提 交</a>
+					</div>
+				</div>
+			</div>
+		
+	</body>
+	<script src="library/jquery-1.11.3.min.js"></script>
+	<script src="config/consts.js"></script>
+	<script src="model/meeno.js"></script>
+	<script src="common/common.js"></script>
+	<script type="text/javascript" src="plugIn/qiniu/main.js" ></script>
+	<script type="text/javascript" src="plugIn/qiniu/mainupload.js" ></script>
+	<script type="text/javascript" src="plugIn/qiniu/plupload.full.min.js" ></script>
+	<script type="text/javascript" src="plugIn/qiniu/qiniu.js" ></script>
+	<script src="controller/banner.js"></script>
+</html>

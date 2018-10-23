@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/base.css" />
+		<link rel="stylesheet" href="css/bootstrap.css" />
+		<link rel="stylesheet" href="css/font-awesome.min.css" />
+		<link rel="stylesheet" href="css/icons.css" />
+		<link rel="stylesheet" href="css/ui-base.css" />
+		<link rel="stylesheet" href="css/lyju.css" />
+		<link rel="shortcut icon" href="images/favicon.ico">
+		<link rel="Bookmark" href="images/favicon.ico">
+	</head>
+	<body>
+		<div class="spinner">
+		  <div class="rect1"></div>
+		  <div class="rect2"></div>
+		  <div class="rect3"></div>
+		  <div class="rect4"></div>
+		  <div class="rect5"></div>
+		</div>
+		
+		<div class="preload">
+			<div class="oGroup">
+				<div class="con_top border-b con_integral">
+					<i class="fa fa-th"></i>&nbsp;
+					创建的团列表
+					<a id="btnCancel" class="btn btn-default"><i class="fa fa-eraser"></i> 取消</a>
+				</div>
+				<div class="admin_btn border-b uIntegealTitle"></div>
+
+				<div class="admin_table group_list_table">
+					<table class="table">
+						<thead>
+							<tr>
+								<td>序号</td>
+								<td>团头像</td>
+								<td>团名称</td>
+								<td>创建时间</td>
+								<td>团详情</td>
+							</tr>
+						</thead>
+						<tbody id="tbody">
+							
+						</tbody>
+					</table>				
+				</div>
+				<!--底部分栏-->
+			    <div class="footer border-b border-t">
+					<div class="rt to_page_btn"><a class="btn btn-default" id="toPage"> 确定 </a></div>
+					<div class="rt to_page_num"> 到第 <input type="text" id="txtPage"/> 页 </div>
+					<div class="rt all_page_num"> 共 <span id="pagenum"></span> 页 </div>
+					<div class="rt show_pages"> 每页显示 <select id="setPagenum"><option value="5">5</option><option value="10">10</option><option value="15">15</option><option value="20">20</option></select> 条 </div>
+					<div class="rt last_page"><a href="#" class="btn btn-default" id="last">尾页</a></div>
+					<div class="rt next_page"><a href="#" class="btn btn-default" id="next">下一页>></a></div>
+					<div class="rt prew_page"><a href="#" class="btn btn-default" id="prev"><span><<</span>上一页</a></div>
+					<div class="rt first_page"><a href="#" class="btn btn-default" id="first">首页</a></div>
+					<div class="clr"></div>
+				</div>
+			</div>
+			
+		    <div class="oGroupDital" style="display: none;">
+				<div class="con_top border-b con_integral">
+					<i class="fa fa-th"></i>&nbsp;
+					团详情
+					<a id="btnCancel0" class="btn btn-default"><i class="fa fa-eraser"></i> 取消</a>
+				</div>
+				<div class="admin_btn border-b uIntegealTitle">
+				</div>
+				<div class="admin_table ogroup_list_table">
+					<table class="table">
+						<thead id="thead">
+							<tr>
+								<td>该团详细信息</td>
+							</tr>
+						</thead>
+						<tbody id="tbody0">
+							
+							<tr id="tbody_01">
+								<td class="t_title">团名称:</td>
+								<td class="tuan"></td>
+							</tr>
+							<tr id="tbody_02">
+								<td class="t_title">团头像:</td>
+								<td class="tuan"><img height="70" src=""/></td>
+							</tr>
+							<tr id="tbody_04">
+								<td class="t_title">出发时间:</td>
+								<td class="tuan"></td>
+							</tr>
+							<tr id="tbody_05">
+								<td class="t_title">返程时间:</td>
+								<td class="tuan"></td>
+							</tr>
+							<tr id="tbody_06">
+								<td class="t_title">出发地:</td>
+								<td class="tuan"></td>
+							</tr>
+							<tr id="tbody_07">
+								<td class="t_title">目的地:</td>
+								<td class="tuan"></td>
+							</tr>
+							<tr id="tbody_08">
+								<td class="t_title">紧急联系人:</td>
+								<td class="tuan"></td>
+							</tr>
+							<tr id="tbody_09">
+								<td class="t_title">当地导游:</td>
+								<td class="tuan"></td>
+							</tr>
+							<tr id="tbody_10">
+								<td class="t_title">目的地须知:</td>
+								<td class="tuan"></td>
+							</tr>
+							<tr id="tbody_11">
+								<td class="t_title">安全须知:</td>
+								<td class="tuan"></td>
+							</tr>
+							<tr id="tbody_12">
+								<td class="t_title">携带物品须知:</td>
+								<td class="tuan"></td>
+							</tr>
+						</tbody>
+					</table>						
+				</div>
+		    </div>
+			
+	    </div>
+	</body>
+	<script src="library/jquery-1.11.3.min.js"></script>
+	<script src="library/bootstrap.min.js"></script>
+	<script src="config/consts.js"></script>
+	<script src="common/common.js"></script>
+	<script src="model/meeno.js"></script>
+	<script type="text/javascript" src="controller/pageIndex.js"></script>
+	<script src="controller/orange_group.js"></script>
+</html>

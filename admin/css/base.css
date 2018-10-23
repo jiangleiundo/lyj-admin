@@ -1,0 +1,250 @@
+/* 清除内外边距 */
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, /* structural elements 结构元素 */
+dl, dt, dd, ul, ol, li, /* list elements 列表元素 */
+pre,i, /* text formatting elements 文本格式元素 */
+fieldset, button, input, textarea, /* form elements 表单元素 */
+th, td { /* table elements 表格元素 */
+    margin: 0;
+    padding: 0;
+}
+
+/* 设置默认字体 */
+body,
+button,
+input,
+select,
+textarea {
+    /* for ie */
+    /*font: 12px/1 Tahoma, Helvetica, Arial, "宋体", sans-serif;*/
+    /*font: 14px/1 Tahoma, Helvetica, Arial, "\5b8b\4f53", sans-serif;*/ /* 用 ascii 字符表示，使得在任何编码下都无问题 */
+}
+
+h1 { font-size: 18px; /* 18px / 12px = 1.5 */ }
+h2 { font-size: 16px; }
+h3 { font-size: 14px; }
+h4,
+h5,
+h6 { font-size: 100%; }
+
+address,
+cite,
+dfn,
+em,
+var { font-style: normal; } /* 将斜体扶正 */
+code,
+kbd,
+pre,
+samp,
+tt { font-family: "Courier New", Courier, monospace; } /* 统一等宽字体 */
+small { font-size: 12px; } /* 小于 12px 的中文很难阅读，让 small 正常化 */
+
+/* 重置列表元素 */
+ul, ol { list-style: none; }
+
+/* 重置文本格式元素 */
+a { text-decoration: none; }
+a:hover { text-decoration: none; }
+
+abbr[title], acronym[title] { /* 注：1.ie6 不支持 abbr; 2.这里用了属性选择符，ie6 下无效果 */
+    border-bottom: 1px dotted;
+    cursor: help;
+}
+
+q:before, q:after { content: ''; }
+
+/* 重置表单元素 */
+legend { color: #000; } /* for ie6 */
+fieldset, img { border: none; } /* img 搭车：让链接里的 img 无边框 */
+/* 注：optgroup 无法扶正 */
+button, input, select, textarea {
+    font-size: 100%; /* 使得表单元素在 ie 下能继承字体大小 */
+}
+
+/* 重置表格元素 */
+table {
+    border-collapse: collapse;  /*边框叠加*/
+    border-spacing: 0;  /* 边框的间距为零*/
+}
+
+/* 重置 hr */
+hr {
+    border: none;
+    height: 1px;
+}
+
+/* 让非ie浏览器默认也显示垂直滚动条，防止因滚动条引起的闪烁 */
+html { overflow-y: scroll; }
+
+/*自定义默认*/
+body{
+	font-family: "微软雅黑", Arial, "\5b8b\4f53", sans-serif;
+	font-size: 14px;
+	color: #777;
+}
+.lt{
+	float: left;
+}
+.rt{
+	float:right;
+}
+.fix{
+	zoom: 1;
+}
+.fix:after{
+	display:block; 
+	content:'clear'; 
+	clear:both; 
+	line-height:0; 
+	visibility:hidden;
+}
+.clr{
+	clear:both;
+}
+.bg-color{
+	background:#EDEFF0;
+}
+.border-b{
+	border-bottom:1px solid #ddd;
+}
+.border-t{
+	border-top:1px solid #ddd;
+}
+.btn > i {
+    vertical-align: middle;
+    margin-right: 5px;
+}
+.ub
+{
+	display: -webkit-box !important;
+	display: box !important;
+	position:relative;
+}
+.ub-f1
+{
+	position:relative;
+	-webkit-box-flex: 1;
+	box-flex: 1;
+}
+.color-1{
+	background:#00AA9A;
+}
+.color-2{
+	background:#EAAD38;
+}
+.color-3{
+	background:#F86931;
+}
+.color-4{
+	background:#73B748;
+}
+/*页面加载缓冲动画*/
+.spinner {
+  margin: 100px auto;
+  width: 50px;
+  height: 60px;
+  text-align: center;
+  font-size: 10px;
+}
+ 
+.spinner > div {
+  background-color: #1AA97B;
+  height: 100%;
+  width: 6px;
+  display: inline-block;
+   
+  -webkit-animation: stretchdelay 1.2s infinite ease-in-out;
+  animation: stretchdelay 1.2s infinite ease-in-out;
+}
+ 
+.spinner .rect2 {
+  -webkit-animation-delay: -1.1s;
+  animation-delay: -1.1s;
+}
+ 
+.spinner .rect3 {
+  -webkit-animation-delay: -1.0s;
+  animation-delay: -1.0s;
+}
+ 
+.spinner .rect4 {
+  -webkit-animation-delay: -0.9s;
+  animation-delay: -0.9s;
+}
+ 
+.spinner .rect5 {
+  -webkit-animation-delay: -0.8s;
+  animation-delay: -0.8s;
+}
+ 
+@-webkit-keyframes stretchdelay {
+  0%, 40%, 100% { -webkit-transform: scaleY(0.4) } 
+  20% { -webkit-transform: scaleY(1.0) }
+}
+ 
+@keyframes stretchdelay {
+  0%, 40%, 100% {
+    transform: scaleY(0.4);
+    -webkit-transform: scaleY(0.4);
+  }  20% {
+    transform: scaleY(1.0);
+    -webkit-transform: scaleY(1.0);
+  }
+}
+
+.preload {
+	display: none;
+}
+
+.img-bg {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,.3);
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+}
+
+.img-box {
+    width: 600px;
+    height: 600px;
+    text-align: center;
+    line-height: 600px;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+.img-box img {
+    border: 5px solid #fff;
+    max-width: 600px;
+    max-height: 600px;
+}
+
+.toast{
+    display: none;
+    position: fixed;
+    left: 50%;
+    top: 30px;
+    width: 220px;
+    margin-left: -110px;
+    background-color: rgba(0,0,0,0.6);
+    padding: 20px;
+    z-index: 10001;
+}
+
+.toast img{
+    width: 40px;
+    display: block;
+    margin: auto;
+}
+
+.toast p{
+    padding: 20px 0;
+    text-align: center;
+    color: #fff;
+}

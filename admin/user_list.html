@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/base.css" />
+		<link rel="stylesheet" href="css/bootstrap.css" />
+		<link rel="stylesheet" href="css/font-awesome.min.css" />
+		<link rel="stylesheet" href="css/icons.css" />
+		<link rel="stylesheet" href="css/ui-base.css" />
+		<link rel="stylesheet" href="css/lyju.css" />
+		<link rel="stylesheet" href="css/calendar.css" />
+		<link rel="shortcut icon" href="images/favicon.ico">
+		<link rel="Bookmark" href="images/favicon.ico">
+	</head>
+	<body>
+		<div class="spinner">
+		  <div class="rect1"></div>
+		  <div class="rect2"></div>
+		  <div class="rect3"></div>
+		  <div class="rect4"></div>
+		  <div class="rect5"></div>
+		</div>
+		
+		<div class="preload">
+			<div class="con_top border-b">
+				<i class="fa fa-th"></i>&nbsp;
+				游客列表
+			</div>
+			<div class="admin_btn border-b border-t">
+				<div class="country_search lt">
+					<div class="coun_s lt">选择注册时间段：</div>
+					<div class="coun_input lt"><input class="form-control search_start" name="txtDate2" type="text" onclick="SetDate(this)"/></div>
+					<div class="coun_s lt">至：</div>
+					<div class="coun_input lt"><input class="form-control search_end" name="txtDate2" type="text" onclick="SetDate(this)" /></div>
+					<a id="coun_search_btn" class="btn btn-default lt"><i class="fa fa-search"></i> 查询</a>
+				</div>
+			</div>
+			<div class="admin_table user_list_table">
+				<table class="table">
+					<thead>
+						<tr>
+							<td>序号</td>
+							<td>游客头像</td>
+							<td>游客昵称</td>
+							<td>性别</td>
+							<td>手机号</td>
+							<td>跟过的团</td>
+							<td>已提问题</td>
+							<td>已咨询导游</td>
+							<td>积分</td>
+							<td>注册时间</td>
+							<td>最近登录</td>
+						</tr>
+					</thead>
+					<tbody id="tbody">
+						
+					</tbody>
+				</table>				
+			</div>
+			
+			<!--底部分栏-->
+		    <div class="footer border-b border-t">
+				<div class="rt to_page_btn"><a class="btn btn-default" id="toPage"> 确定 </a></div>
+				<div class="rt to_page_num"> 到第 <input type="text" id="txtPage"/> 页 </div>
+				<div class="rt all_page_num"> 共 <span id="pagenum"></span> 页 </div>
+				<div class="rt show_pages"> 每页显示 <select id="setPagenum"><option value="5">5</option><option value="10">10</option><option value="15">15</option><option value="20">20</option></select> 条 </div>
+				<div class="rt last_page"><a href="#" class="btn btn-default" id="last">尾页</a></div>
+				<div class="rt next_page"><a href="#" class="btn btn-default" id="next">下一页>></a></div>
+				<div class="rt prew_page"><a href="#" class="btn btn-default" id="prev"><span><<</span>上一页</a></div>
+				<div class="rt first_page"><a href="#" class="btn btn-default" id="first">首页</a></div>
+				<div class="clr"></div>
+			</div>
+	    </div>
+	    
+	</body>
+	<script src="library/jquery-1.11.3.min.js"></script>
+	<script src="library/bootstrap.min.js"></script>
+	<script src="config/consts.js"></script>
+	<script src="common/common.js"></script>
+	<script src="model/meeno.js"></script>
+	<script type="text/javascript" src="controller/pageIndex.js"></script>
+	<script type="text/javascript" src="plugIn/calendar.js" ></script>
+	<script src="controller/user_list.js"></script>
+
+</html>

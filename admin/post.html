@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/bootstrap.css" />
+		<link rel="stylesheet" href="css/icons.css" />
+		<link rel="stylesheet" href="css/ui-base.css" />
+	</head>
+	<body>
+		<div class="com_top">
+			<div class="com_top_lf"><i class=" md-apps"></i> 帖子管理</div>
+			<div class="com_top_rg"><a class="btn btn-default waves-effect waves-light" id="btnAdd"><i class="md-add"></i> 添加</a></div>
+			<div class="com_top_rg"><a class="btn btn-danger waves-effect waves-light" id="btnDel"><i class="md-clear"></i> 删除</a></div>
+		</div>
+		
+		<div class="search">
+			<div class="tab">
+				<div class="tab_active">最新</div>
+				<div>最热</div>
+				<p class="line"></p>
+			</div>
+			<div class="search_item">
+				<div class="search_item_lf">搜索内容:</div>
+				<div class="search_item_rg"><input type="text" class="form-control"/></div>
+				<div class="search_item_lf">搜索内容:</div>
+				<div class="search_item_rg"><input type="text" class="form-control"/></div>
+				<div class="search_item_lf">搜索内容:</div>
+				<div class="search_item_rg"><input type="text" class="form-control"/></div>
+				<div class="search_btn"><a class="btn btn-default"><i class="ion-search"></i> 搜索</a></div>
+			</div>
+		</div>
+		
+	</body>
+	<script src="library/jquery-1.11.3.min.js"></script>
+	<script>
+		$(".tab div").on("click",function(){
+			var i = $(this).index();
+			$(this).addClass("tab_active").siblings("div").removeClass("tab_active");
+			$(this).siblings(".line").stop().animate({left:i*$(this).width()+'px'});
+		})
+	</script>
+</html>

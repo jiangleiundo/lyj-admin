@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" href="css/base.css" />
+		<link rel="stylesheet" href="css/bootstrap.css" />
+		<link rel="stylesheet" href="css/font-awesome.min.css" />
+		<link rel="stylesheet" href="css/lyju.css" />
+		<link rel="shortcut icon" href="images/favicon.ico">
+		<link rel="Bookmark" href="images/favicon.ico">
+	</head>
+	<body>
+		<div class="index_top">
+			<div class="index_top_lt lt">旅游桔后台管理系统</div>
+			<div class="index_top_rt rt">
+				<span class="index_admin"></span>&nbsp;[管理员]&nbsp;
+				<i class="fa fa-unsorted"></i>
+			</div>
+			<ul class="index_layout">
+				<li><a href="#" id="clear">清除缓存</a></li>
+				<li><a href="#" id="toExit"><i class="fa fa-power-off"></i> 退出</a></li>
+			</ul>
+		</div>
+		<!--top end-->
+
+		<!--left Strat-->
+		<div class="ui_left">
+			<div class="ui_left_top">
+				<div class="profile-photo-overlay"></div>
+			</div>
+            <div class="navContainer">
+                <div class="navitem_act" id="home"><a href="home.html" target="index_frame"><i class="fa fa-home"></i><span class="spanMg">首页</span></a></div>
+                <div class="navitem" id="privilege_1"><a href="admin.html" target="index_frame"><i class="fa fa-user-secret"></i><span class="spanMg">管理员管理</span></a><i class="fa fa-angle-right icon"></i></div>
+
+                <div class="navitem" id="privilege_2"><a href="user_list.html" target="index_frame"><i class="fa fa-user"></i><span class="spanMg">游客管理</span></a><i class="fa fa-angle-right icon"></i></div>
+
+                <div class="navitem" id="privilege_3"><a><i class="fa fa-flag"></i><span class="spanMg">桔子管理</span></a><i class="fa fa-angle-right icon"></i></div>
+                <ul class="navContent">
+                    <li><a href="orange_list.html" target="index_frame" ><i class="fa fa-caret-right"></i> <span class="mg">桔子列表</span></a></li>
+                    <li><a href="orange_audit_list.html" target="index_frame" ><i class="fa fa-caret-right"></i> <span class="mg">待审核桔子列表</span></a></li>
+                    <li><a href="orange_recommend.html" target="index_frame" ><i class="fa fa-caret-right"></i> <span class="mg">推荐桔子列表</span></a></li>
+                </ul>
+                <div class="navitem" id="privilege_4"><a href="get_country.html" target="index_frame"><i class="fa fa-map"></i><span class="spanMg">地点管理</span></a><i class="fa fa-angle-right icon"></i></div>
+
+                <div class="navitem" id="privilege_5"><a href="group_chat.html" target="index_frame"><i class="fa fa-comments"></i><span class="spanMg">团群聊管理</span></a><i class="fa fa-angle-right icon"></i></div>
+
+                <div class="navitem" id="privilege_6"><a href="foot_mark.html" target="index_frame"><i class="fa fa-location-arrow"></i><span class="spanMg">足迹管理</span></a><i class="fa fa-angle-right icon"></i></div>
+
+                <div class="navitem" id="privilege_7"><a href="get_travel.html" target="index_frame"><i class="fa fa-plane"></i><span class="spanMg">行程管理</span></a><i class="fa fa-angle-right icon"></i></div>
+
+                <div class="navitem" id="privilege_8"><a href="get_question.html" target="index_frame"><i class="fa fa-tty"></i><span class="spanMg">问题管理</span></a><i class="fa fa-angle-right icon"></i></div>
+
+                <div class="navitem" id="privilege_9"><a href="hotel.html" target="index_frame"><i class="fa fa-glass"></i><span class="spanMg">酒店管理</span></a><i class="fa fa-angle-right icon"></i></div>
+
+                <div class="navitem" id="privilege_10"><a href="safety_notice.html" target="index_frame"><i class="fa fa-volume-up"></i><span class="spanMg">资讯管理</span></a><i class="fa fa-angle-right icon"></i></div>
+
+                <div class="navitem" id="privilege_12"><a href="banner.html" target="index_frame"><i class="fa fa-photo" style="width:14px;"></i><span class="spanMg">banner管理</span></a><i class="fa fa-angle-right icon"></i></div>
+
+                <div class="navitem" id="privilege_11"><a href="edition.html" target="index_frame"><i class="fa fa-usb" style="width:14px;"></i><span class="spanMg">版本控制</span></a><i class="fa fa-angle-right icon"></i></div>
+
+                <div class="navitem" id="privilege_13"><a href="timeCtrl.html" target="index_frame"><i class="fa fa-history" style="width:14px;"></i><span class="spanMg">时间控制</span></a><i class="fa fa-angle-right icon"></i></div>
+
+                <div class="navitem" id="privilege_14"><a href="template.html" target="index_frame"><i class="fa fa-file-zip-o" style="width:14px;"></i><span class="spanMg">模板管理</span></a><i class="fa fa-angle-right icon"></i></div>
+
+                <div class="navitem" id="privilege_15"><a href="sysMsg.html" target="index_frame"><i class="fa fa-envelope" style="width:14px;"></i><span class="spanMg">系统消息管理</span></a><i class="fa fa-angle-right icon"></i></div>
+            </div>
+		</div>
+		<!--left end-->
+
+		<!--right Strat-->
+		<div class="ui_rg">
+			<iframe src="home.html" id="index_frame" frameborder="0" class="iframe" name="index_frame" scrolling="no" marginheight="0" marginwidth="0" onload="this.height=100"></iframe>
+		</div>
+		<!--right end-->
+
+		<!--公用提示模态框-->
+		<div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" id="errModal">
+		    <div class="modal-dialog modal-sm">
+			    <div class="modal-content">
+			         <div class="modal-header">
+			            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+			            <h4 class="modal-title" id="myModalLabel">友情提示</h4>
+			         </div>
+			         <div class="modal-body" id="errMes">
+			         </div>
+			    </div>
+		    </div>
+		</div>
+
+	</body>
+	<script type="text/javascript" src="library/jquery-1.11.3.min.js" ></script>
+	<script type="text/javascript" src="library/bootstrap.min.js" ></script>
+	<script type="text/javascript" src="config/consts.js" ></script>
+	<script type="text/javascript" src="common/common.js" ></script>
+	<script src="model/meeno.js"></script>
+	<script>
+
+		//根据权限显示功能列表
+		$(function()
+		{
+			var admins = commonFun.getLocStorage(storageKey.KuserName);
+			var adminType = commonFun.getLocStorage(storageKey.KadminType);
+			var premission = commonFun.getLocStorage(storageKey.Kpermissions);
+			if(adminType != 1)
+			{
+				$(".navContainer div").hide();
+				$("#home").show();
+
+				var premissionArr = premission.split(",");
+
+				for(var i in premissionArr){
+                    if(premissionArr.hasOwnProperty(i))
+                    {
+                        $("#privilege_" + premissionArr[i]).show();
+                    }
+				}
+			}
+			else
+			{
+				$(".navContainer div").show();
+			}
+			
+			homeParams.indexAdmin.text(admins);
+		});
+		
+		homeParams.indexTopRt.on("click",function(){
+			homeParams.indexLayout.slideToggle();
+		});
+		//清除缓存
+		homeParams.clear.on("click",function(){
+			homeParams.indexLayout.slideUp();
+			meeno.JQueryAjax(Api.API_CLEAR_MEMCACHE,{},clearMemory);
+		});
+
+		function clearMemory(data){
+			var err = data.err;
+			if(err == 0)
+			{
+				alert("清除缓存成功");
+			}
+		}
+		homeParams.toExit.on("click",function(){
+			localStorage.removeItem(storageKey.kGuideAuditData);//移除本地存储的待审核导游列表
+			localStorage.removeItem(storageKey.KfootMarkData);//退出时移除本地存储足迹信息
+			localStorage.removeItem(storageKey.KguideGroupsData);//退出时移除本地存储的导游带团信息
+			localStorage.removeItem(storageKey.KcountryData);//退出时清除本地存储的国家信息
+			localStorage.removeItem(storageKey.KcityData);//退出时清除本地存储的城市信息
+			localStorage.removeItem(storageKey.KcityId);//退出时清除本地存储城市id
+			localStorage.removeItem(storageKey.KcountryId);//退出时清除本地存储国家id
+			localStorage.removeItem(storageKey.KprovinceId);//退出时清除本地存储省id
+			localStorage.removeItem(storageKey.KsafetyNotice);//退出时清除本地存储的安全信息
+			location.href = "login.html";
+		});
+
+        /*
+        * nav点击动画
+        * */
+		homeParams.nav.on("click",function(){
+
+			$(this).attr("class", homeParams.navItemActive).siblings("div").attr("class", homeParams.navItem);
+            if($(this).next().hasClass("navContent"))
+            {
+                $(".navContent").slideToggle(200);
+            }
+            else
+            {
+                $(".navContent").slideUp();
+            }
+
+		});
+
+		//iframe自适应高度
+		function reinitIframe(){
+	        var iframe = document.getElementById("index_frame");
+		    try
+		    {
+			    var bHeight = iframe.contentWindow.document.body.scrollHeight,
+			        dHeight = iframe.contentWindow.document.documentElement.scrollHeight;
+
+			    iframe.height =  Math.max(bHeight, dHeight);
+		    }
+		    catch (ex)
+		    {}
+		}
+	    window.setInterval("reinitIframe()", 200);
+	    
+	    function commonDialog(errMessage)
+	  	{
+	  		$("#errMes").text(errMessage);
+		    $("#errModal").modal("show");
+	  	}
+
+	</script>
+</html>

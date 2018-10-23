@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/base.css" />
+		<link rel="stylesheet" href="css/bootstrap.css" />
+		<link rel="stylesheet" href="css/font-awesome.min.css" />
+		<link rel="stylesheet" href="css/ui-base.css" />
+		<link rel="stylesheet" href="css/lyju.css" />
+		<link rel="shortcut icon" href="images/favicon.ico">
+		<link rel="Bookmark" href="images/favicon.ico">
+	</head>
+	<body>
+		<div class="spinner">
+		  <div class="rect1"></div>
+		  <div class="rect2"></div>
+		  <div class="rect3"></div>
+		  <div class="rect4"></div>
+		  <div class="rect5"></div>
+		</div>
+		
+		<div class="preload">
+			<div class="hotel_detial">
+				<div class="con_top border-b sightManageH">
+					<i class="fa fa-th"></i>&nbsp;
+					<span id="sightTitleH"></span>
+					<a id="btnCancelH" class="btn btn-default"><i class="fa fa-eraser"></i> 取消</a>
+				</div>
+				<div class="jl_hotel_box">
+					<div class="sightNameH">
+						<span>酒店名称:</span>
+						<input id="sightInputH" class="form-control" type="text"/>
+					</div>
+					<div class="sighttxtH">
+						<span>酒店简介:</span>
+						<textarea class="form-control" id="sightTextH" style="resize: none;"></textarea>
+					</div>
+					<div class="sightSubmitH">
+						<span>上传图片:</span>
+						<div class="sightSubH">
+							<div class="sightSubTopH">
+								<a class="btn btn-warning" id="fileUploadH">选择文件</a>
+								<input disabled="disabled" class="form-control" type="text" id="showMsgH" value="" />
+								<a class="btn btn-danger" id="delBtnH">删除</a>
+							</div>
+							<div class="sightSubBtmH" id="s_imgH">
+								<div class="s_imgH">
+									<img src="images/default.jpg"/>
+									<p class="s_delH">&times;</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="sightSbuBtnH">
+						<a id="modalSubmitH" class="btn btn-info">提交数据</a>
+					</div>
+					<div class="sightPicsH">
+						<span>景点图片:</span>
+						<div class="sight_picsH">
+							<img height="400px" src="images/default.jpg"/>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><!--preload end-->
+		
+		<script type="text/javascript" src="library/jquery-1.11.3.min.js" ></script>
+		<script type="text/javascript" src="library/bootstrap.min.js" ></script>
+		<script type="text/javascript" src="config/consts.js" ></script>
+		<script type="text/javascript" src="model/meeno.js" ></script>
+		<script type="text/javascript" src="common/common.js" ></script>
+		<script type="text/javascript" src="plugIn/qiniu/plupload.full.min.js" ></script>
+		<script type="text/javascript" src="plugIn/qiniu/qiniu.js" ></script>
+		<script type="text/javascript" src="plugIn/qiniu/main.js" ></script>
+		<script type="text/javascript" src="controller/hotel_detial.js"></script>
+	</body>
+</html>

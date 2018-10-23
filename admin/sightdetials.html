@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/base.css" />
+		<link rel="stylesheet" href="css/bootstrap.css" />
+		<link rel="stylesheet" href="css/font-awesome.min.css" />
+		<link rel="stylesheet" href="css/ui-base.css" />
+		<link rel="stylesheet" href="css/lyju.css" />
+		<link rel="shortcut icon" href="images/favicon.ico">
+		<link rel="Bookmark" href="images/favicon.ico">
+	</head>
+	<body>
+		<div class="spinner">
+		  <div class="rect1"></div>
+		  <div class="rect2"></div>
+		  <div class="rect3"></div>
+		  <div class="rect4"></div>
+		  <div class="rect5"></div>
+		</div>
+		
+		<div class="preload">
+
+			<div class="con_top border-b sightManage">
+				<i class="fa fa-th"></i>&nbsp;
+				<span id="sightTitle"></span>
+				<a id="btnCancel2" class="btn btn-default"><i class="fa fa-eraser"></i> 返回</a>
+			</div>
+			<div class="sightBody border-t">
+				<div class="sightName">
+					<span class="lt">景点名称:</span>
+					<input id="sightInput" class="form-control lt" type="text"/>
+				</div>
+				<div class="sighttxt">
+					<span class="lt">景点简介:</span>
+					<textarea class="form-control lt" id="sightText" style="resize: none;"></textarea>
+				</div>
+				<div class="sightSubmit">
+					<span>上传图片:</span>
+					<div class="sightSub">
+						<div class="sightSubTop">
+							<div class="subFile lt">
+								<a class="btn btn-warning">选择图片</a>
+								<input type="file" id="fileUpload"/>
+							</div>
+							<div class="lt subState">
+								<input disabled="disabled" type="text" id="showMsg" value="请选择上传图片" />
+							</div>
+							<div class="subDel rt">
+								<a class="btn btn-danger" id="delBtn">删除</a>
+							</div>
+						</div>
+						<div class="sightSubBtm" id="s_img"></div>
+					</div>
+					<div class="sightSbuBtn">
+						<a id="modalSubmit" class="btn btn-info">提交</a>
+					</div>
+				</div>
+				<div class="sightPics">
+					<span class="">景点图片:</span>
+					<div class="sight_pics" id="sight_pics"></div>
+				</div>
+			</div>
+
+		</div>
+		<script type="text/javascript" src="library/jquery-1.11.3.min.js" ></script>
+		<script type="text/javascript" src="library/bootstrap.min.js" ></script>
+		<script type="text/javascript" src="config/consts.js" ></script>
+		<script type="text/javascript" src="model/meeno.js" ></script>
+		<script type="text/javascript" src="common/common.js" ></script>
+		<script type="text/javascript" src="plugIn/qiniu/highlight.js" ></script>
+		<script type="text/javascript" src="plugIn/qiniu/mainupload.js" ></script>
+		<script type="text/javascript" src="plugIn/qiniu/moxie.js" ></script>
+		<script type="text/javascript" src="plugIn/qiniu/plupload.full.min.js" ></script>
+		<script type="text/javascript" src="plugIn/qiniu/qiniu.js" ></script>
+		<script type="text/javascript" src="plugIn/qiniu/ui.js" ></script>
+		<script type="text/javascript" src="plugIn/qiniu/zh_CN.js" ></script>
+		<script type="text/javascript" src="plugIn/qiniu/main.js" ></script>
+		<script type="text/javascript" src="controller/sightdetials.js" ></script>
+	</body>
+</html>
