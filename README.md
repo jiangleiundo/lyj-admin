@@ -1,2 +1,10 @@
-# lyj-admin
-旅游桔app-管理后台（完）
+## lyj-admin ##
+---
+ 
+- jQuery
+- bootstrap
+- 七牛上传存储
+- font-awesome
+
+
+---
